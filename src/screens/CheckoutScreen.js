@@ -341,7 +341,7 @@ const CheckoutScreen = ({ navigation }) => {
     </ScrollView>
   );
   const renderPaymentForm = () => (
-    <View>
+    <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
       <View style={{ paddingHorizontal: spacing.lg }}> 
       <Text style={styles.stepLabel}>STEP 2</Text>
       <Text style={styles.stepTitle}>Payment</Text>
@@ -419,7 +419,7 @@ const CheckoutScreen = ({ navigation }) => {
       
         
         
-    </View>
+    </ScrollView>
   );
 
   const renderConfirmation = () => (
