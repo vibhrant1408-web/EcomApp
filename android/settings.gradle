@@ -1,6 +1,21 @@
 pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }
 plugins { id("com.facebook.react.settings") }
 extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
-rootProject.name = 'EcomApp'
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://repo.maven.apache.org/maven2'
+        }
+        maven {
+            url 'https://jcenter.bintray.com'
+        }
+    }
+}
+
+rootProject.name = 'EcomShop'
 include ':app'
 includeBuild('../node_modules/@react-native/gradle-plugin')

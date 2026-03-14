@@ -5,14 +5,13 @@ import { Provider } from 'react-redux';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import store from './src/redux/store';
 import RootNavigator from './src/navigation/RootNavigator';
-import { colors } from './src/utils/theme';
 
 function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <Provider store={store}>
-          <StatusBar barStyle='light-content' backgroundColor={'#141416'} />
+          <StatusBar barStyle="light-content" backgroundColor="#141416" />
           <RootNavigator />
         </Provider>
       </SafeAreaProvider>
